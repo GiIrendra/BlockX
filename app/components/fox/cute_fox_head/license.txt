@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cute Fox head
+* source:	https://sketchfab.com/3d-models/cute-fox-head-f8419a578c9246deb899a987492828ac
+* author:	violetwong (https://sketchfab.com/violetwong)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cute Fox head" (https://sketchfab.com/3d-models/cute-fox-head-f8419a578c9246deb899a987492828ac) by violetwong (https://sketchfab.com/violetwong) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
