@@ -123,7 +123,7 @@ const HomePage = () => {
       {/* Navbar */}
       <nav className="fixed top-0 font-serif w-full bg-black text-white shadow-md z-50">
         <div className="flex justify-between items-center px-4 py-4">
-          <SparklesText text="NFT-DeFi Platform" className="text-4xl" sparklesCount={20} />
+          <SparklesText text="BlockX" className="text-4xl" sparklesCount={4} />
 
           {/* Theme Toggle Button */}
           <button
