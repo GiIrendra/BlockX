@@ -9,7 +9,5 @@
   NODE_VERSION = "18" # Use the Node.js version your project requires
 
 [build.caching]
-  # Cache Node.js dependencies
-  paths = ["node_modules", ".npm"]
-  # Cache Python dependencies
-  paths = [".venv", "venv", "python-packages"]
+  # Cache Node.js and Python dependencies
+  paths = ["node_modules", ".npm", ".venv", "venv", "python-packages"]
