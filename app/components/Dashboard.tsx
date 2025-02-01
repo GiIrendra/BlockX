@@ -165,7 +165,7 @@ const Dashboard = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
   return (
     <motion.div
-      className={`min-h-screen px-4 mt-8 pt-5 sm:px-6 md:px-16 py-12 rounded-3xl ${isDarkMode ? "bg-gray-900 text-white" : "bg-blue-100 text-black"} shadow-custom`}
+      className={`min-h-[80vh] px-4 mt-8 pt-5 sm:px-6 md:px-16 py-12 rounded-3xl ${isDarkMode ? "bg-gray-900 text-white" : "bg-blue-100 text-black"} shadow-custom`}
       initial="hidden"
       animate="visible"
       variants={containerVariants}

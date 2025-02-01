@@ -10,7 +10,7 @@ import TokenMetrics from "./components/Robo/TokenMetrics";
 import { FaSun, FaMoon } from "react-icons/fa"; // Icons for light/dark mode
 import RotationalFigure from "./components/fox/fox";
 import { SparklesText } from "@/components/ui/sparkles-text";
-
+import Staking from "./components/Staking";
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("Introduction");
@@ -18,7 +18,7 @@ const HomePage = () => {
 
   const introRef = useRef<HTMLDivElement>(null);
   const dashboardRef = useRef<HTMLDivElement>(null);
-  // const stakingRef = useRef<HTMLDivElement>(null);
+  const stakingRef = useRef<HTMLDivElement>(null);
   const defiPoolMetricsRef = useRef<HTMLDivElement>(null);
   const tokenPricePredictionRef = useRef<HTMLDivElement>(null);
   const tokenMetricsRef = useRef<HTMLDivElement>(null);
@@ -27,7 +27,7 @@ const HomePage = () => {
     () => [
       { ref: introRef, name: "Introduction" },
       { ref: dashboardRef, name: "Dashboard" },
-      // { ref: stakingRef, name: "Staking" },
+      { ref: stakingRef, name: "Staking" },
       { ref: defiPoolMetricsRef, name: "DeFi Pool Metrics" },
       { ref: tokenPricePredictionRef, name: "Token Price Predictions" },
       { ref: tokenMetricsRef, name: "Token Metrics" },
@@ -217,13 +217,14 @@ const HomePage = () => {
   className="mt-[55vh] text-4xl"
 />
 
+
         <MarquePage />
       </motion.div>
 
       {/* Dashboard Section */}
       <motion.div
         ref={dashboardRef}
-        className="min-h-screen bg-gray-300 dark:bg-gray-800 px-6 md:px-16"
+        className="min-h-screen pb-8 mt-9 pt-4 bg-gray-300 dark:bg-gray-800 px-6 md:px-16"
         initial="hidden"
         whileInView="visible"
         variants={sectionVariants}
@@ -233,21 +234,16 @@ const HomePage = () => {
       </motion.div>
 
       {/* Staking Section */}
-      {/* <motion.div
+      <motion.div
         ref={stakingRef}
-        className="min-h-screen bg-gray-300 dark:bg-gray-800 flex flex-col items-center justify-center px-6 md:px-16"
+        className="min-h-screen pb-8 pt-4  bg-gray-300 mt-8 dark:bg-gray-800 flex flex-col items-center justify-center px-6 md:px-16"
         initial="hidden"
         whileInView="visible"
         variants={sectionVariants}
         viewport={{ once: true }}
       >
-        <h2 className="text-xl md:text-3xl font-semibold text-green-900 dark:text-green-100 mb-4 text-center">
-          Staking
-        </h2>
-        <p className="text-sm md:text-lg text-green-800 dark:text-green-200 text-center max-w-2xl">
-          Stake your NFTs to earn rewards and maximize your investments.
-        </p>
-      </motion.div> */}
+        <Staking isDarkMode={isDarkMode}/>
+      </motion.div>
 
       {/* DeFi Pool Metrics Section */}
       <motion.div
