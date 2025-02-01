@@ -13,7 +13,8 @@ def predict_next_10_days(open_price: float):
 
     for i in range(10):
         next_day = today + timedelta(days=i + 1)
-        prediction = model.predict([[open_price]])[0]
+        # Ensure input has column names
+        prediction = model.predict(pd.DataFrame([[open_price]], columns=["open_price"]))[0]
         predictions.append({
             "date": next_day.strftime("%Y-%m-%d"),
             "predicted_price": prediction
@@ -22,7 +23,7 @@ def predict_next_10_days(open_price: float):
 
     return predictions
 
-# Example: Use the last open_price from cleaned_data.csv
+# Load last open_price from cleaned_data.csv
 df = pd.read_csv("cleaned_data.csv")
 last_open_price = df["open_price"].iloc[-1]
 
