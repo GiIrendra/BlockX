@@ -2,9 +2,6 @@
   command = "pip install -r requirements.txt && npm install && npm run build"
   publish = ".next"
 
-[[plugins]]
-  package = "netlify-plugin-python"
-
 [build.environment]
   NODE_VERSION = "18" # Use the Node.js version your project requires
 
