@@ -107,7 +107,7 @@ const DeFiPoolMetrics = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
   return (
     <motion.div
-      className={`min-h-[80vh] w-[90%] md:w-[77%] mx-auto mt-8 mb-9 p-4 md:p-6 shadow-custom rounded-3xl ${isDarkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-blue-50 to-purple-50 text-black"}`}
+      className={`min-h-[70vh] w-[90%] md:w-[77%] mx-auto mt-8 mb-9 p-4 md:p-6 shadow-custom rounded-3xl ${isDarkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-blue-50 to-purple-50 text-black"}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}

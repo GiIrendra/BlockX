@@ -111,7 +111,7 @@ const TokenPricePrediction = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
   return (
     <motion.div
-      className={`min-h-screen mt-8 mb-9 p-4 shadow-custom rounded-3xl md:p-6 ${isDarkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-blue-50 to-purple-50 text-black"}`}
+      className={`min-h-[70vh] mt-8 mb-9 p-4 shadow-custom rounded-3xl md:p-6 ${isDarkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-blue-50 to-purple-50 text-black"}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}

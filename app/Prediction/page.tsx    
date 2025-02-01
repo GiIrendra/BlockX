@@ -1,0 +1,38 @@
+import React, { useState, useEffect } from "react";
+import PredictionGraph from "@/components/PredictionGraph";
+import StatsCards from "@/components/StatsCards";
+
+const PredictionPage: React.FC = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Fetch predicted data
+    const fetchData = async () => {
+      const response = await fetch("/api/predictions");
+      const result = await response.json();
+      setData(result);
+    };
+
+    fetchData();
+  }, []);
+
+  if (!data.length) return <p>Loading...</p>;
+
+  const latestPrediction = data[data.length - 1];
+
+  return (
+    <div className="min-h-screen bg-gray-900 p-8">
+      <StatsCards
+        openPrice={latestPrediction.openPrice}
+        predictedPrice={latestPrediction.predictedPrice}
+        confidenceLower={latestPrediction.confidenceLower}
+        confidenceUpper={latestPrediction.confidenceUpper}
+      />
+      <div className="mt-8">
+        <PredictionGraph data={data} />
+      </div>
+    </div>
+  );
+};
+
+export default PredictionPage;

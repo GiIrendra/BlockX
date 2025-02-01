@@ -5,6 +5,7 @@ import MarquePage from "./components/Robo/Marque";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import Dashboard from "./components/Dashboard";
 import DeFiPoolMetrics from "./components/Robo/DeFiPoolMetrics";
+import FinalPredict from "./components/Robo/FinalPredict";
 import TokenPricePrediction from "./components/Robo/TokenPricePrediction";
 import TokenMetrics from "./components/Robo/TokenMetrics";
 import { FaSun, FaMoon } from "react-icons/fa"; // Icons for light/dark mode
@@ -271,6 +272,7 @@ const HomePage = () => {
         viewport={{ once: true }}
       >
         <TokenPricePrediction isDarkMode={isDarkMode} />
+        <FinalPredict isDarkMode={isDarkMode}/>
       </motion.div>
 
       {/* Token Metrics Section */}
