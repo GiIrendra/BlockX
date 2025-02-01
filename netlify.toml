@@ -4,7 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
-  PYTHON_VERSION = "3.8"
-
+  PYTHON_VERSION = "3.9"
+  
 [build.caching]
   paths = ["node_modules", ".npm", ".venv", "venv", "python-packages"]
