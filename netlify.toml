@@ -3,7 +3,7 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "18" # or the Node.js version your project needs
+  NODE_VERSION = "18"
   PYTHON_VERSION = "3.8"
 
 [build.caching]
